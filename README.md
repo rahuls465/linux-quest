@@ -58,3 +58,43 @@ This is a **React + Vite** web app with a fantasy RPG theme. Here's what we've i
 
 ## 🗂 File Structure (So Far)
 
+
+```
+/src
+  /pages
+    Login.jsx
+    Home.jsx
+    Quest.jsx
+  /data
+    quests.json
+  App.jsx
+  main.jsx
+  index.css
+.gitignore
+README.md
+index.html
+```
+
+## 🚀 Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+## 🛠 Tech Stack
+
+- Frontend: React + Vite
+- Routing: React Router
+- Backend (optional): Flask / Go
+- Database: SQLite or localStorage
+
+## 📌 Planned Features
+
+- Terminal emulator (mimic shell)
+- Dynamic feedback and hints
+- Game-style design (fonts, sound FX)
+- Daily rewards & unlockables
+- Quest briefing audios (podcast-style)
