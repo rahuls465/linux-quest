@@ -1,0 +1,377 @@
+[
+  {
+    "day": 1,
+    "title": "Day 1 Quest",
+    "theory": "Theory content for Day 1.",
+    "audio": "/assets/audio/day1.mp3",
+    "reward": {
+      "name": "Tool 1",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 1."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 1"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 1"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 1"
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "title": "Day 2 Quest",
+    "theory": "Theory content for Day 2.",
+    "audio": "/assets/audio/day2.mp3",
+    "reward": {
+      "name": "Tool 2",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 2."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 2"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 2"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 2"
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "title": "Day 3 Quest",
+    "theory": "Theory content for Day 3.",
+    "audio": "/assets/audio/day3.mp3",
+    "reward": {
+      "name": "Tool 3",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 3."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 3"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 3"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 3"
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "title": "Day 4 Quest",
+    "theory": "Theory content for Day 4.",
+    "audio": "/assets/audio/day4.mp3",
+    "reward": {
+      "name": "Tool 4",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 4."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 4"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 4"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 4"
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "title": "Day 5 Quest",
+    "theory": "Theory content for Day 5.",
+    "audio": "/assets/audio/day5.mp3",
+    "reward": {
+      "name": "Tool 5",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 5."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 5"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 5"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 5"
+      }
+    ]
+  },
+  {
+    "day": 6,
+    "title": "Day 6 Quest",
+    "theory": "Theory content for Day 6.",
+    "audio": "/assets/audio/day6.mp3",
+    "reward": {
+      "name": "Tool 6",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 6."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 6"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 6"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 6"
+      }
+    ]
+  },
+  {
+    "day": 7,
+    "title": "Day 7 Quest",
+    "theory": "Theory content for Day 7.",
+    "audio": "/assets/audio/day7.mp3",
+    "reward": {
+      "name": "Tool 7",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 7."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 7"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 7"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 7"
+      }
+    ]
+  },
+  {
+    "day": 8,
+    "title": "Day 8 Quest",
+    "theory": "Theory content for Day 8.",
+    "audio": "/assets/audio/day8.mp3",
+    "reward": {
+      "name": "Tool 8",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 8."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 8"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 8"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 8"
+      }
+    ]
+  },
+  {
+    "day": 9,
+    "title": "Day 9 Quest",
+    "theory": "Theory content for Day 9.",
+    "audio": "/assets/audio/day9.mp3",
+    "reward": {
+      "name": "Tool 9",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 9."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 9"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 9"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 9"
+      }
+    ]
+  },
+  {
+    "day": 10,
+    "title": "Day 10 Quest",
+    "theory": "Theory content for Day 10.",
+    "audio": "/assets/audio/day10.mp3",
+    "reward": {
+      "name": "Tool 10",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 10."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 10"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 10"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 10"
+      }
+    ]
+  },
+  {
+    "day": 11,
+    "title": "Day 11 Quest",
+    "theory": "Theory content for Day 11.",
+    "audio": "/assets/audio/day11.mp3",
+    "reward": {
+      "name": "Tool 11",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 11."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 11"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 11"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 11"
+      }
+    ]
+  },
+  {
+    "day": 12,
+    "title": "Day 12 Quest",
+    "theory": "Theory content for Day 12.",
+    "audio": "/assets/audio/day12.mp3",
+    "reward": {
+      "name": "Tool 12",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 12."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 12"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 12"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 12"
+      }
+    ]
+  },
+  {
+    "day": 13,
+    "title": "Day 13 Quest",
+    "theory": "Theory content for Day 13.",
+    "audio": "/assets/audio/day13.mp3",
+    "reward": {
+      "name": "Tool 13",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 13."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 13"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 13"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 13"
+      }
+    ]
+  },
+  {
+    "day": 14,
+    "title": "Day 14 Quest",
+    "theory": "Theory content for Day 14.",
+    "audio": "/assets/audio/day14.mp3",
+    "reward": {
+      "name": "Tool 14",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 14."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 14"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 14"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 14"
+      }
+    ]
+  },
+  {
+    "day": 15,
+    "title": "Day 15 Quest",
+    "theory": "Theory content for Day 15.",
+    "audio": "/assets/audio/day15.mp3",
+    "reward": {
+      "name": "Tool 15",
+      "icon": "\ud83d\udee0\ufe0f",
+      "description": "Description of Tool 15."
+    },
+    "levels": [
+      {
+        "id": 1,
+        "task": "Level 1 task for Day 15"
+      },
+      {
+        "id": 2,
+        "task": "Level 2 task for Day 15"
+      },
+      {
+        "id": 3,
+        "task": "Level 3 task for Day 15"
+      }
+    ]
+  }
+]
