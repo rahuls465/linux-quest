@@ -1,26 +1,27 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
+  const user = localStorage.getItem('linuxQuestUser');
 
-  const handleStart = () => {
-    navigate('/quest/1'); // Start Day 1
-  };
+  useEffect(() => {
+    if (!user) navigate('/login');
+  }, []);
 
   return (
-    <div className="home p-4 text-center">
-      <h1 className="text-4xl font-bold mb-4">🧙‍♂️ Linux Quest</h1>
-      <p className="mb-6">
-        Embark on a 15-day adventure to master Linux through quests, rewards, and challenges.
-      </p>
+    <div className="p-6 text-center">
+      <h1 className="text-4xl font-bold mb-4">🧙 Welcome, {user}!</h1>
+      <p className="mb-6">Your Linux journey begins now. Are you ready?</p>
       <button
-        onClick={handleStart}
-        className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-xl"
+        onClick={() => navigate('/quest/1')}
+        className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-xl"
       >
-        Start Adventure
+        Start Day 1
       </button>
     </div>
   );
 }
 
 export default Home;
+

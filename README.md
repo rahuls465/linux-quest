@@ -45,56 +45,151 @@ This is a **React + Vite** web app with a fantasy RPG theme. Here's what we've i
 
 ---
 
-## 🧾 Tech Stack
-
-- **Frontend:** React, Vite, JavaScript
-- **Routing:** React Router
-- **Styling:** Tailwind CSS (optional)
-- **Backend (optional):** Python (Flask) / Go
-- **Database:** SQLite or localStorage
-- **Deployment:** Vercel / GitHub Pages (TBD)
-
----
-
-## 🗂 File Structure (So Far)
-
-
-```
-/src
-  /pages
-    Login.jsx
-    Home.jsx
-    Quest.jsx
-  /data
-    quests.json
-  App.jsx
-  main.jsx
-  index.css
-.gitignore
-README.md
-index.html
-```
-
 ## 🚀 Getting Started
 
+### Prerequisites
+- Node.js 16.x or higher
+- npm 7.x or higher
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [https://github.com/rahuls465/linux-quest.git]
+cd linux-quest
+```
+
+2. Install dependencies:
 ```bash
 npm install
+```
+
+3. Start the development server:
+```bash
 npm run dev
 ```
 
 Visit: [http://localhost:5173](http://localhost:5173)
 
+### Project Dependencies
+Key dependencies and their versions:
+```json
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.4"
+  }
+}
+```
+
+### Configuration Files
+The project requires several configuration files:
+
+1. `vite.config.js` - Vite configuration:
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+})
+```
+
+2. `tailwind.config.js` - Tailwind CSS configuration:
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+3. `postcss.config.js` - PostCSS configuration:
+```javascript
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+## 🗂 File Structure
+
+```
+/src
+  /pages
+    Login.jsx    # Login page component
+    Home.jsx     # Home/hub world component
+    Quest.jsx    # Quest page component
+  /data
+    quests.json  # Quest data and content
+  /components    # Reusable components
+  App.jsx        # Main app component
+  main.jsx       # Application entry point
+  index.css      # Global styles and Tailwind imports
+/public          # Static assets
+  /assets
+    /audio       # Quest briefing audio files
+.gitignore
+README.md
+index.html
+vite.config.js
+tailwind.config.js
+postcss.config.js
+```
+
 ## 🛠 Tech Stack
 
-- Frontend: React + Vite
-- Routing: React Router
-- Backend (optional): Flask / Go
-- Database: SQLite or localStorage
+- **Frontend:** 
+  - React 18 with Vite
+  - React Router v6 for navigation
+  - Tailwind CSS for styling
+- **State Management:** React hooks and context
+- **Backend (planned):** Flask / Go
+- **Database:** SQLite or localStorage
+- **Deployment:** Vercel / GitHub Pages (TBD)
 
-## 📌 Planned Features
+## 🚧 Implementation Roadmap
 
 - Terminal emulator (mimic shell)
 - Dynamic feedback and hints
 - Game-style design (fonts, sound FX)
 - Daily rewards & unlockables
 - Quest briefing audios (podcast-style)
+
+## ⚠️ Troubleshooting
+
+### Blank Page Issues
+If you encounter a blank page:
+1. Ensure all dependencies are installed with correct versions
+2. Verify all configuration files are present
+3. Check if CSS imports are properly set up in `main.jsx`
+4. Clear browser cache and node_modules, then reinstall
+
+### Common Issues
+1. **Missing styles**: Ensure Tailwind CSS is properly imported in `index.css`
+2. **Routing issues**: Check React Router setup in `App.jsx`
+3. **Build errors**: Verify Vite configuration in `vite.config.js`
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines for details on our code of conduct and the process for submitting pull requests.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
