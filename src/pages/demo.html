@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Quest: Day 3 - Mastering File Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;770&family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #3f2f25; /* Dark brown for background */
+            background-image: url('https://www.transparenttextures.com/patterns/parchment.png'); /* Parchment texture */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #4b3726; /* Dark brown text for parchment */
+        }
+        .parchment-container {
+            background-color: #f7e6c4; /* Light parchment color */
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Subtle paper texture */
+            border: 5px solid #6b4c3b; /* Darker brown border for scroll effect */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            position: relative;
+            padding: 2.5rem; /* Increased padding */
+            border-radius: 8px;
+            max-width: 800px;
+            width: 95%; /* Responsive width */
+            margin: 2rem auto;
+            overflow-y: auto; /* Enable scroll if content is too long */
+            max-height: 90vh; /* Limit height to enable scroll */
+        }
+
+        /* Custom scrollbar for webkit browsers */
+        .parchment-container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .parchment-container::-webkit-scrollbar-track {
+            background: #d8c39e; /* Light parchment tone */
+            border-radius: 10px;
+        }
+
+        .parchment-container::-webkit-scrollbar-thumb {
+            background-color: #8b6e5b; /* Darker brown */
+            border-radius: 10px;
+            border: 3px solid #d8c39e;
+        }
+
+        .medieval-heading {
+            font-family: 'Cinzel', serif;
+            font-weight: 770; /* Bolder for titles */
+            color: #3f2f25; /* Even darker brown for headings */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .glowing-button {
+            position: relative;
+            overflow: hidden;
+            background-color: #a0522d; /* Sienna */
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Pill shape */
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+            text-decoration: none; /* For the "Back to Hub" button */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .glowing-button:hover {
+            background-color: #c2673b; /* Lighter sienna */
+            box-shadow: 0 0 15px #ff8c00; /* Orange glow */
+            transform: translateY(-2px);
+        }
+        .glowing-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 140, 0, 0.4) 0%, rgba(255, 140, 0, 0) 70%);
+            transition: transform 0.8s ease-in-out;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .glowing-button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        .glowing-button span {
+            position: relative;
+            z-index: 1;
+        }
+        .tools-box {
+            background-color: #d8c39e; /* Slightly darker parchment for contrast */
+            border: 2px dashed #6b4c3b;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace; /* Monospace for commands */
+            color: #3f2f25;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+        .tools-box span {
+            font-weight: bold;
+            color: #a0522d; /* Highlight commands */
+        }
+        .objective-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .objective-list li::before {
+            content: '✅'; /* Checkmark icon */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="parchment-container">
+        <h1 class="text-4xl text-center mb-6 medieval-heading" id="quest-title">
+            Day 3: Mastering File Operations <span class="text-3xl">🗡️</span>
+        </h1>
+
+        <p class="text-lg mb-8 leading-relaxed" id="quest-description">
+            The ancient scrolls speak of a forgotten library, its knowledge locked behind a myriad of tangled directories and misplaced files. To unlock its secrets and retrieve the legendary 'Scroll of Wisdom', you must first prove your mastery over the fundamental art of file manipulation. The elder wizard demands you organize the chaos that has befallen the realm's digital archives.
+        </p>
+
+        <h2 class="text-2xl mb-4 medieval-heading">
+            <span class="text-2xl">📝</span> Your Sacred Tasks:
+        </h2>
+        <ul class="list-none objective-list mb-8" id="quest-objectives">
+            <li>Locate the misplaced 'Dragon's Breath Potion' recipe file.</li>
+            <li>Duplicate the 'Elixir of Immortality' formula for the Royal Alchemist.</li>
+            <li>Relocate the 'Map to the Lost Dungeon' to the 'Treasures' directory.</li>
+            <li>Rename the 'Useless Trinket' log to 'Valuable Artifacts'.</li>
+            <li>Purge the 'Goblin Scraps' directory of all its contents.</li>
+        </ul>
+
+        <h2 class="text-2xl mb-4 medieval-heading">
+            <span class="text-2xl">🧰</span> Tools of the Trade:
+        </h2>
+        <div class="tools-box" id="quest-tools">
+            <code>
+                <span class="font-bold">cp</span> (copy) <br>
+                <span class="font-bold">mv</span> (move/rename) <br>
+                <span class="font-bold">rm</span> (remove/delete) <br>
+                <span class="font-bold">find</span> (locate files)
+            </code>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center mt-10 space-y-4 md:space-y-0 md:space-x-8">
+            <button class="glowing-button text-xl px-8 py-3" onclick="alert('Quest Started! Good luck, adventurer!')">
+                <span>Begin Your Journey <span class="ml-2">✨</span></span>
+            </button>
+
+            <a href="index.html" class="glowing-button text-base px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white hover:shadow-gray-400">
+                <span>Return to the Oracle's Hub <span class="ml-2">🚪</span></span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
