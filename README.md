@@ -55,7 +55,7 @@ This is a **React + Vite** web app with a fantasy RPG theme. Here's what we've i
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/rahuls465/linux-quest.git]
+git clone https://github.com/rahuls465/linux-quest.git
 cd linux-quest
 ```
 
@@ -190,6 +190,3 @@ If you encounter a blank page:
 
 Contributions are welcome! Please read our contributing guidelines for details on our code of conduct and the process for submitting pull requests.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
