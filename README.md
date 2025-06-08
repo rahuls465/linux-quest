@@ -2,6 +2,28 @@
 
 Welcome to **Linux Quest**, an interactive 15-level adventure game that teaches Linux concepts in a fun and immersive way. Each level is a "day" with quests, tools, and monster battles—perfect for beginners and CS students.
 
+## 🔒 Recent Security Updates
+
+The following security enhancements have been implemented:
+- Moved sensitive configuration to environment variables
+- Added password hashing using Werkzeug
+- Configured CORS protection for frontend-backend communication
+- Added session-based authentication
+- Set up SQLite database for secure data persistence
+
+### Server Configuration
+Create a `.env` file in the server directory with:
+```
+SECRET_KEY=your-secret-key-here
+DATABASE_URL=sqlite:///database.db
+FRONTEND_URL=http://localhost:5173
+```
+
+To generate a secure secret key:
+```bash
+python3 -c "import secrets; print(secrets.token_hex(32))"
+```
+
 ---
 
 ## 📚 Project Structure
@@ -50,6 +72,7 @@ This is a **React + Vite** web app with a fantasy RPG theme. Here's what we've i
 ### Prerequisites
 - Node.js 16.x or higher
 - npm 7.x or higher
+- Python 3.x and pip (for backend)
 
 ### Installation
 
@@ -59,14 +82,30 @@ git clone https://github.com/rahuls465/linux-quest.git
 cd linux-quest
 ```
 
-2. Install dependencies:
+2. Install frontend dependencies:
 ```bash
+cd client
 npm install
 ```
 
-3. Start the development server:
+3. Install backend dependencies:
 ```bash
+cd server
+python3 -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+4. Start the development servers:
+```bash
+# Terminal 1 - Frontend
+cd client
 npm run dev
+
+# Terminal 2 - Backend
+cd server
+source venv/bin/activate
+python app.py
 ```
 
 Visit: [http://localhost:5173](http://localhost:5173)
@@ -160,8 +199,9 @@ postcss.config.js
   - React Router v6 for navigation
   - Tailwind CSS for styling
 - **State Management:** React hooks and context
-- **Backend (planned):** Flask / Go
-- **Database:** SQLite or localStorage
+- **Backend:** Flask with SQLAlchemy
+- **Database:** SQLite
+- **Authentication:** Session-based with password hashing
 - **Deployment:** Vercel / GitHub Pages (TBD)
 
 ## 🚧 Implementation Roadmap
@@ -185,8 +225,8 @@ If you encounter a blank page:
 1. **Missing styles**: Ensure Tailwind CSS is properly imported in `index.css`
 2. **Routing issues**: Check React Router setup in `App.jsx`
 3. **Build errors**: Verify Vite configuration in `vite.config.js`
+4. **Backend connection**: Verify `.env` configuration and CORS settings
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our contributing guidelines for details on our code of conduct and the process for submitting pull requests.
-
+Contributions are welcome!
